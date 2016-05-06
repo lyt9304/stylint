@@ -24,6 +24,8 @@
   "none": "always",
   "noImportant": true,
   "noRequire": true,
+  "noExtend": true,
+  "noCharset": true,
   "parenSpace": "always",
   "placeholders": "always",
   "prefixVarsWithDollar": "always",

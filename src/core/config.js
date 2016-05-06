@@ -47,6 +47,10 @@ var config = {
 	noImportant: true,
 	// disallow @require
 	noRequire: true,
+	// disallow @extend
+	noExtend: true,
+	// disallow @charset
+	noCharset: true,
 	// check for extra space inside parens
 	parenSpace: false,
 	// only allow @extending of placeholder vars

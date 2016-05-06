@@ -21,6 +21,8 @@ var linterMethods = stampit().methods( {
 		none: require( './none' ),
 		noImportant: require( './noImportant' ),
 		noRequire: require('./noRequire'),
+		noExtend: require('./noExtend'),
+		noCharset: require('./noCharset'),
 		parenSpace: require( './parenSpace' ),
 		placeholders: require( './placeholders' ),
 		prefixVarsWithDollar: require( './prefixVarsWithDollar' ),
