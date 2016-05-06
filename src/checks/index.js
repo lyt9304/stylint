@@ -36,7 +36,8 @@ var linterMethods = stampit().methods( {
 		zeroUnits: require( './zeroUnits' ),
 		zIndexNormalize: require( './zIndexNormalize' ),
 		mixinSpacePref: require('./mixinSpacePref'),
-		mixinNameCheck: require('./mixinNameCheck')
+		mixinNameCheck: require('./mixinNameCheck'),
+		prefixMixinsWithDollar: require('./prefixMixinsWithDollar')
 	}
 } )
 

@@ -1,7 +1,7 @@
-some-mixin(a)
+-some-mixin($a)
   font-size a
 
-other-mixin(a)
+other-mixin(myParamOne, $myParamTwo)
   font-size a
 
 .message
@@ -11,6 +11,7 @@ other-mixin(a)
   color yellow
 
 a
+  -some-mixin($a)
   color red
-  some-mixin(a)
+
 

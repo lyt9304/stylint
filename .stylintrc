@@ -39,7 +39,8 @@
   "zeroUnits": "never",
   "zIndexNormalize": false,
   "mixinSpacePref": "never",
-  "mixinNameCheck": true
+  "mixinNameCheck": true,
+  "prefixMixinsWithDollar": "always"
 }
 
 // {

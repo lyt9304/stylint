@@ -80,7 +80,9 @@ var config = {
 	// check for extra space for mixins
 	mixinSpacePref: 'never',
 	// check mixin name if it is valid
-	mixinNameCheck: true
+	mixinNameCheck: true,
+	// check mixin param is start with a dollar symbol
+	prefixMixinsWithDollar: "always"
 }
 
 module.exports = config
