@@ -76,7 +76,9 @@ var config = {
 	// check for use of 0px | 0em | 0rem | 0% | etc and recommend 0 instead
 	zeroUnits: 'never',
 	// suggest a normalized z index value, base of whatever this is
-	zIndexNormalize: false
+	zIndexNormalize: false,
+	// check for extra space for mixins
+	mixinSpacePref: 'never'
 }
 
 module.exports = config

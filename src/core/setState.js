@@ -3,7 +3,7 @@
 // super simple.
 // if theres anything on the line besides whitespace, it aint empty
 var emptyLineRe = /\S/
-
+var mixinDeclRe = /(\s*)(\S+)\(.+\)/
 
 /**
  * @description sets values like context, determine whether we even run tests, etc
@@ -50,6 +50,20 @@ var setState = function( line ) {
 	if ( emptyLineRe.test( line ) === false ) {
 		this.cache.sortOrderCache = []
 		return
+	}
+
+	if ( mixinDeclRe.test(line) ) {
+		var mixinName = RegExp.$2
+		// if mixin is declared, we record it with cache.mixinsDeclared
+		// value records
+		if ( !this.cache.mixinsDeclared.hasOwnProperty( mixinName ) ){
+			this.cache.mixinsDeclared[mixinName] = 0;
+			console.log(JSON.stringify(this.cache.mixinsDeclared))
+			return
+		} else {
+			this.cache.mixinsDeclared[mixinName]++;
+			console.log(JSON.stringify(this.cache.mixinsDeclared))
+		}
 	}
 
 	// actually run tests if we made it this far

@@ -26,7 +26,7 @@
   "noRequire": true,
   "noExtend": true,
   "noCharset": true,
-  "parenSpace": "always",
+  "parenSpace": "never",
   "placeholders": "always",
   "prefixVarsWithDollar": "always",
   "quotePref": "single",
@@ -37,7 +37,8 @@
   "universal": false,
   "valid": true,
   "zeroUnits": "never",
-  "zIndexNormalize": false
+  "zIndexNormalize": false,
+  "mixinSpacePref": "never"
 }
 
 // {
