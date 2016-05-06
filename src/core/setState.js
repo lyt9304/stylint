@@ -59,7 +59,6 @@ var setState = function( line ) {
 		if ( !this.cache.mixinsDeclared.hasOwnProperty( mixinName ) ){
 			this.cache.mixinsDeclared[mixinName] = 0
 			//console.log(JSON.stringify(this.cache.mixinsDeclared))
-			return
 		} else {
 			this.cache.mixinsDeclared[mixinName]++
 			//console.log(JSON.stringify(this.cache.mixinsDeclared))

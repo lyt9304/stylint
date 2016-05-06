@@ -18,6 +18,8 @@ var mixinSpacePref = function( line ) {
     return
   }
 
+  console.log("in mixin space")
+
   // handle 2 kinds of situations
   // 1. some-mixin(arg1, arg2)
   // 2. some-mixin ( arg1, arg2 ) having space
