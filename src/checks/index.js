@@ -20,6 +20,7 @@ var linterMethods = stampit().methods( {
 		namingConvention: require( './namingConvention' ),
 		none: require( './none' ),
 		noImportant: require( './noImportant' ),
+		noRequire: require('./noRequire'),
 		parenSpace: require( './parenSpace' ),
 		placeholders: require( './placeholders' ),
 		prefixVarsWithDollar: require( './prefixVarsWithDollar' ),

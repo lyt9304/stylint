@@ -1,7 +1,7 @@
 {
   "blocks": false,
   "brackets": false,
-  "colons": false,
+  "colons": "never",
   "colors": {
     "expect": "always"
   },
@@ -23,6 +23,7 @@
   "namingConventionStrict": true,
   "none": "always",
   "noImportant": true,
+  "noRequire": true,
   "parenSpace": "always",
   "placeholders": "always",
   "prefixVarsWithDollar": "always",
