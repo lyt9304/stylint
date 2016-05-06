@@ -40,7 +40,8 @@
   "zIndexNormalize": false,
   "mixinSpacePref": "never",
   "mixinNameCheck": true,
-  "prefixMixinsWithDollar": "always"
+  "prefixMixinsWithDollar": "always",
+  "mixinParamNameCheck": true
 }
 
 // {

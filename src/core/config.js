@@ -79,10 +79,12 @@ var config = {
 	zIndexNormalize: false,
 	// check for extra space for mixins
 	mixinSpacePref: 'never',
-	// check mixin name if it is valid
+	// check mixin name if it is valid spellec
 	mixinNameCheck: true,
 	// check mixin param is start with a dollar symbol
-	prefixMixinsWithDollar: "always"
+	prefixMixinsWithDollar: "always",
+	// check mixin param if it is valid spelled
+	mixinParamNameCheck: true
 }
 
 module.exports = config
