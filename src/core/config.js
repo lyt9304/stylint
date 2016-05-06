@@ -78,7 +78,9 @@ var config = {
 	// suggest a normalized z index value, base of whatever this is
 	zIndexNormalize: false,
 	// check for extra space for mixins
-	mixinSpacePref: 'never'
+	mixinSpacePref: 'never',
+	// check mixin name if it is valid
+	mixinNameCheck: true
 }
 
 module.exports = config

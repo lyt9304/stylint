@@ -1,7 +1,4 @@
-@require './haha.styl'
-@charset 'utf8'
-
-some-mixin( a )
+some-mixin(a)
   font-size a
 
 other-mixin(a)
@@ -11,11 +8,9 @@ other-mixin(a)
   font-size 15px
 
 .warning
-  @extend .message
   color yellow
 
 a
   color red
   some-mixin(a)
-  font-size (5px)
 

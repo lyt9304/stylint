@@ -38,7 +38,8 @@
   "valid": true,
   "zeroUnits": "never",
   "zIndexNormalize": false,
-  "mixinSpacePref": "never"
+  "mixinSpacePref": "never",
+  "mixinNameCheck": true
 }
 
 // {

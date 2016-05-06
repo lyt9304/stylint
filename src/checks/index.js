@@ -35,7 +35,8 @@ var linterMethods = stampit().methods( {
 		valid: require( './valid' ),
 		zeroUnits: require( './zeroUnits' ),
 		zIndexNormalize: require( './zIndexNormalize' ),
-		mixinSpacePref: require('./mixinSpacePref')
+		mixinSpacePref: require('./mixinSpacePref'),
+		mixinNameCheck: require('./mixinNameCheck')
 	}
 } )
 
