@@ -57,12 +57,12 @@ var setState = function( line ) {
 		// if mixin is declared, we record it with cache.mixinsDeclared
 		// value records
 		if ( !this.cache.mixinsDeclared.hasOwnProperty( mixinName ) ){
-			this.cache.mixinsDeclared[mixinName] = 0;
-			console.log(JSON.stringify(this.cache.mixinsDeclared))
+			this.cache.mixinsDeclared[mixinName] = 0
+			//console.log(JSON.stringify(this.cache.mixinsDeclared))
 			return
 		} else {
-			this.cache.mixinsDeclared[mixinName]++;
-			console.log(JSON.stringify(this.cache.mixinsDeclared))
+			this.cache.mixinsDeclared[mixinName]++
+			//console.log(JSON.stringify(this.cache.mixinsDeclared))
 		}
 	}
 
