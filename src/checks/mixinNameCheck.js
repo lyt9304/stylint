@@ -18,7 +18,7 @@ var mixinNameCheck = function( line ) {
   }
 
   var invalidChar = /[^a-zA-Z\-]/
-  var firstLetter = /^[a-z]/
+  var firstLetter = /^[a-z\-]/
   var nameCheck = !invalidChar.test(mixinName) && firstLetter.test(mixinName)
 
   if ( !nameCheck ) {
