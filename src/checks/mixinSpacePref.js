@@ -20,8 +20,6 @@ var mixinSpacePref = function( line ) {
 
   var name = RegExp.$2.trim()
 
-  console.log(name)
-
   var isCSS = validCSS.some( function( css ) {
     return name === css || this.checkPrefix( name, css, validJSON )
   }.bind( this ) )
