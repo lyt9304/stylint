@@ -67,8 +67,7 @@ var setState = function( line ) {
     }
 
 		// we have to clean url rule after we checked it
-		line = line.replace( urlRe, "" )
-    this.cache.line = line
+    this.cache.line = line.replace( urlRe, "" )
     this.cache.origLine = this.cache.origLine.replace( urlRe, "" )
 	}
 
