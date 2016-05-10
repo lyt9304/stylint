@@ -1,5 +1,7 @@
 'use strict'
 
+var urlRe = /( +|:)url\((.+)\)/g
+var placeholder = "{{stylint-url-placeholder}}"
 
 /**
  * @description separate out line comments and remove interpolation
@@ -11,7 +13,13 @@ var trimLine = function( line ) {
 	this.state.hasComment = false
 	this.cache.comment = ''
 
-	// strip line comments
+	//filter url and replace it with placeholder
+	if ( urlRe.test( line ) ) {
+		var tmpurl = RegExp.$2
+		line = line.replace(tmpurl, placeholder)
+	}
+
+	// strip line comments except urls
 	if ( line.indexOf( '//' ) !== -1 ) {
 		this.state.hasComment = true
 		this.cache.comment = line.slice( line.indexOf( '//' ), line.length )
@@ -19,6 +27,11 @@ var trimLine = function( line ) {
 		if ( !startsWithCommentRe.test( line.trim() ) ) {
 			line = line.slice( 0, line.indexOf( '//' ) - 1 )
 		}
+	}
+
+	// restore the url
+	if ( tmpurl ) {
+		line = line.replace(placeholder, tmpurl)
 	}
 
 	// strip interpolated variables

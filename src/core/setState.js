@@ -71,12 +71,18 @@ var setState = function( line ) {
 		if ( typeof this.config.urlQuotation !== 'undefined' && this.config.urlQuotation !== false) {
 			this.state.conf = this.config.urlQuotation.expect || this.config.urlQuotation
 			this.state.severity = this.config.urlQuotation.error ? 'Error' : 'Warning'
-			this.lintMethods.urlQuotation.call( this )
+			this.lintMethods.urlQuotation.call( this, line )
 		}
+
+    if ( typeof this.config.urlLink !== 'undefined' && this.config.urlLink !== false) {
+      this.state.conf = this.config.urlLink.expect || this.config.urlLink
+      this.state.severity = this.config.urlLink.error ? 'Error' : 'Warning'
+      this.lintMethods.urlLink.call( this, line )
+    }
 
 		// we have to clean url rule after we checked it
 		line = line.replace( urlRe, "" )
-		//console.log( "==>" + line )
+    this.cache.line = line
 	}
 
 	// actually run tests if we made it this far

@@ -1,6 +1,6 @@
 'use strict'
 
-var urlRe = /url\s*\((.+)\)/
+var urlRe = /( +|:)url\((.+)\)/g
 
 /**
  * @description check url() should not contain quotation
@@ -11,7 +11,7 @@ var urlQuotation = function( line ) {
 
   if( !urlRe.test(line) ) { return }
 
-  var content = RegExp.$1.trim()
+  var content = RegExp.$2.trim()
 
   var hasQuote = /^['"]/.test(content)
 

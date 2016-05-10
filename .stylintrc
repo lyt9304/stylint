@@ -42,7 +42,8 @@
   "mixinNameCheck": true,
   "prefixMixinsWithDollar": "always",
   "mixinParamNameCheck": true,
-  "urlQuotation": "never"
+  "urlQuotation": "never",
+  "urlLink": true
 }
 
 // {

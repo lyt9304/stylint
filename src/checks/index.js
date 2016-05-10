@@ -39,7 +39,8 @@ var linterMethods = stampit().methods( {
 		mixinNameCheck: require('./mixinNameCheck'),
 		prefixMixinsWithDollar: require('./prefixMixinsWithDollar'),
 		mixinParamNameCheck: require('./mixinParamNameCheck'),
-		urlQuotation: require('./urlQuotation')
+		urlQuotation: require('./urlQuotation'),
+		urlLink: require('./urlLink')
 	}
 } )
 

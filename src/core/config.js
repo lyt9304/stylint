@@ -86,7 +86,9 @@ var config = {
 	// check mixin param if it is valid spelled
 	mixinParamNameCheck: true,
 	// check url() should not contain quotation
-	urlQuotation: "never"
+	urlQuotation: "never",
+	// check url is a complete addressed url, not a local path
+	urlLink: true
 }
 
 module.exports = config
