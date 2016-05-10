@@ -1,7 +1,8 @@
 'use strict'
 
 // strips out comments and urls
-//var cleanFileRe = /( +|:)url\(.+\)|(\r\n|\n|\r)|(^(\/\*)|([\s'"](\/\*)))(?!\/)(.|[\r\n]|\n)+?\*\/\n?/gm
+// var cleanFileRe = /( +|:)url\(.+\)|(\r\n|\n|\r)|(^(\/\*)|([\s'"](\/\*)))(?!\/)(.|[\r\n]|\n)+?\*\/\n?/gm
+// for checking url rules, we are not replace url part here, we replace it when url rule check is done
 var cleanFileRe = /(\r\n|\n|\r)|(^(\/\*)|([\s'"](\/\*)))(?!\/)(.|[\r\n]|\n)+?\*\/\n?/gm
 var lineEndingsRe = /\r\n|\n|\r/gm
 

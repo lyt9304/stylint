@@ -8,7 +8,6 @@ var urlRe = /url\s*\((.+)\)/
  * @return {boolean} true if in order, false if not
  */
 var urlQuotation = function( line ) {
-  console.log(this.cache.origLine)
 
   if( !urlRe.test(line) ) { return }
 

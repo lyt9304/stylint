@@ -66,6 +66,7 @@ var setState = function( line ) {
 		}
 	}
 
+	// checking url rules
 	if ( urlRe.test(line) ) {
 		if ( typeof this.config.urlQuotation !== 'undefined' && this.config.urlQuotation !== false) {
 			this.state.conf = this.config.urlQuotation.expect || this.config.urlQuotation
@@ -73,8 +74,9 @@ var setState = function( line ) {
 			this.lintMethods.urlQuotation.call( this )
 		}
 
+		// we have to clean url rule after we checked it
 		line = line.replace( urlRe, "" )
-		console.log( "==>" + line )
+		//console.log( "==>" + line )
 	}
 
 	// actually run tests if we made it this far
