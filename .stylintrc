@@ -41,7 +41,8 @@
   "mixinSpacePref": "never",
   "mixinNameCheck": true,
   "prefixMixinsWithDollar": "always",
-  "mixinParamNameCheck": true
+  "mixinParamNameCheck": true,
+  "urlQuotation": "never"
 }
 
 // {

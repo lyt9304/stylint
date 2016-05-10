@@ -3,6 +3,7 @@
 // super simple.
 // if theres anything on the line besides whitespace, it aint empty
 var emptyLineRe = /\S/
+var urlRe = /( +|:)url\(.+\)/g
 var mixinDeclRe = /(\s*)(\S+)\(.+\)/
 
 /**
@@ -63,6 +64,17 @@ var setState = function( line ) {
 			this.cache.mixinsDeclared[mixinName]++
 			//console.log(JSON.stringify(this.cache.mixinsDeclared))
 		}
+	}
+
+	if ( urlRe.test(line) ) {
+		if ( typeof this.config.urlQuotation !== 'undefined' && this.config.urlQuotation !== false) {
+			this.state.conf = this.config.urlQuotation.expect || this.config.urlQuotation
+			this.state.severity = this.config.urlQuotation.error ? 'Error' : 'Warning'
+			this.lintMethods.urlQuotation.call( this )
+		}
+
+		line = line.replace( urlRe, "" )
+		console.log( "==>" + line )
 	}
 
 	// actually run tests if we made it this far

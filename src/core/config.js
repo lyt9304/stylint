@@ -84,7 +84,9 @@ var config = {
 	// check mixin param is start with a dollar symbol
 	prefixMixinsWithDollar: "always",
 	// check mixin param if it is valid spelled
-	mixinParamNameCheck: true
+	mixinParamNameCheck: true,
+	// check url() should not contain quotation
+	urlQuotation: "never"
 }
 
 module.exports = config

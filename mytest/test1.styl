@@ -1,17 +1,18 @@
--some-mixin($a)
-  font-size a
+-some-mixin($a, $b)
+  font-size $a+$b
 
-other-mixin(myParamOne, $myParamTwo)
+other-mixin($myParamOne, $myParamTwo)
   font-size a
 
 .message
   font-size 15px
 
 .warning
+  background-image url('www.baidu.com')
   color yellow
 
 a
-  -some-mixin($a)
+  -some-mixin 10px
   color red
 
 
