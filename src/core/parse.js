@@ -6,6 +6,15 @@
 var cleanFileRe = /(\r\n|\n|\r)|(^(\/\*)|([\s'"](\/\*)))(?!\/)(.|[\r\n]|\n)+?\*\/\n?/gm
 var lineEndingsRe = /\r\n|\n|\r/gm
 
+var Parser = require('stylus').Parser
+var fs = require('fs')
+
+var jsonFormat = require('json-format')
+var config = {
+  type: 'space',
+  size: 2
+}
+
 
 /**
  * @description parses file for testing by removing extra new lines and block comments
@@ -37,8 +46,18 @@ var parse = function( err, res ) {
 			return this.setState( line )
 		}.bind( this ) )
 
+		// record disabledLine for ast checking
+		console.log(this.cache.disabledLine)
+
+		//TODO: ast check
+    var parser = new Parser(file.toString())
+    var ast = parser.parse()
+
+    fs.writeFileSync("test.txt", jsonFormat( ast, config))
+
 		// save previous file
 		this.cache.prevFile = this.cache.file
+		this.cache.disabledLine = []
 
 		// if on the last file, call the done function to output success or error msg
 		if ( this.cache.fileNo === res.length - 1 ) {

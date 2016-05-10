@@ -15,24 +15,28 @@ var setState = function( line ) {
 
 	// ignore the current line if @stylint ignore
 	if ( this.cache.origLine.indexOf( '@stylint ignore' ) !== -1 ) {
+    this.cache.disabledLine.push(this.cache.lineNo)
 		return
 	}
 
 	// if @stylint on / off commands found in the code
 	if ( this.stylintOn( this.cache.origLine ) ||
 		this.stylintOff( this.cache.origLine ) === false ) {
+    this.cache.disabledLine.push(this.cache.lineNo)
 		return
 	}
 
 	// if hash starting / ending, set state and return early
 	if ( this.hashOrCSSStart( line ) ||
 		this.hashOrCSSEnd( line ) === false ) {
+    this.cache.disabledLine.push(this.cache.lineNo)
 		return
 	}
 
 	// if starting / ending keyframes
 	if ( this.keyframesStart( line ) ||
 		this.keyframesEnd( line ) === false ) {
+    this.cache.disabledLine.push(this.cache.lineNo)
 		return
 	}
 
@@ -74,7 +78,9 @@ var setState = function( line ) {
 	// actually run tests if we made it this far
 	if ( this.state.testsEnabled === true ) {
 		return this.lint()
-	}
+	} else {
+    this.cache.disabledLine.push(this.cache.lineNo)
+  }
 }
 
 module.exports = setState

@@ -1,14 +1,16 @@
 some-mixin(a, b)
   font-size a+b
 
+// @stylint off
 .message
   font-size 15px
   some-mixin(10px, 2)
+// @stylint on
 
 .warning
   background-image url(http://s.baixing.net/a.png)
   border-radius (20px)
-  color rgba(100, 255, 255, 1)
+  color rgba(100, 255, 255, 1) // @stylint ignore
 
 a
   color red

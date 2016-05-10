@@ -10,7 +10,6 @@ var cache = {
 	fileNo: 0, // curr # of filesLen we're on
 	line: '', // curr line we're testing
 	lineNo: 0, // curr line number we're testing
-	mixinsDeclared: {}, // an object of all declared mixins in files and called times
 	mixins: [], // an array of all declared transparent mixins
 	msg: '', // the done message (55 warnings blah blah)
 	origLine: '', // original line before stripping/trimming
@@ -22,7 +21,8 @@ var cache = {
 	sCache: { '0': [] }, // each key is an array of selectors in that context
 	sortOrderCache: [], // we keep a context based arr of selectors here to check sort orde
 	warnings: [], // array of the errors detected so far
-	zCache: [] // array of z-index uses
+	zCache: [], // array of z-index uses
+	disabledLine:[]
 }
 
 module.exports = cache
