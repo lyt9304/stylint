@@ -1,9 +1,14 @@
+some-mixin(a, b)
+  font-size a+b
+
 .message
   font-size 15px
+  some-mixin(10px, 2)
 
 .warning
   background-image url(http://s.baixing.net/a.png)
-  color yellow
+  border-radius (20px)
+  color rgba(100, 255, 255, 1)
 
 a
   color red

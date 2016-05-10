@@ -4,7 +4,6 @@
 // if theres anything on the line besides whitespace, it aint empty
 var emptyLineRe = /\S/
 var urlRe = /( +|:)url\(.+\)/g
-var mixinDeclRe = /(\s*)(\S+)\(.+\)/
 
 /**
  * @description sets values like context, determine whether we even run tests, etc
@@ -53,19 +52,6 @@ var setState = function( line ) {
 		return
 	}
 
-	if ( mixinDeclRe.test(line) ) {
-		var mixinName = RegExp.$2
-		// if mixin is declared, we record it with cache.mixinsDeclared
-		// value records
-		if ( !this.cache.mixinsDeclared.hasOwnProperty( mixinName ) ){
-			this.cache.mixinsDeclared[mixinName] = 0
-			//console.log(JSON.stringify(this.cache.mixinsDeclared))
-		} else {
-			this.cache.mixinsDeclared[mixinName]++
-			//console.log(JSON.stringify(this.cache.mixinsDeclared))
-		}
-	}
-
 	// checking url rules
 	if ( urlRe.test(line) ) {
 		if ( typeof this.config.urlQuotation !== 'undefined' && this.config.urlQuotation !== false) {
@@ -83,6 +69,7 @@ var setState = function( line ) {
 		// we have to clean url rule after we checked it
 		line = line.replace( urlRe, "" )
     this.cache.line = line
+    this.cache.origLine = this.cache.origLine.replace( urlRe, "" )
 	}
 
 	// actually run tests if we made it this far
