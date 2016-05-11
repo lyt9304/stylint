@@ -29,6 +29,12 @@ var mixinParamNameCheck = function( node, line ) {
     if ( param['__type'] !== 'Ident' ) { continue }
 
     var paramName = param['name']
+
+    // except the $ on the head
+    if( /^\$/.test(paramName) ){
+      paramName = paramName.replace(/^\$/, "")
+    }
+
     if( invalidChar.test( paramName ) || !littleCamel.test( paramName )) {
       nameCheck = false
       break
