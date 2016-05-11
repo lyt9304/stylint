@@ -39,13 +39,13 @@
   "zeroUnits": "never",
   "zIndexNormalize": false,
   "mixinSpacePref": "never",
-//  "mixinNameCheck": true,
-//  "prefixMixinsWithDollar": "always",
-//  "mixinParamNameCheck": true,
   "urlQuotation": "never",
   "urlLink": true,
 
   "selectorLowerCase": true
+  //  "mixinNameCheck": true,
+  //  "prefixMixinsWithDollar": "always",
+  //  "mixinParamNameCheck": true,
 
 }
 
