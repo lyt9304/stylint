@@ -1,14 +1,17 @@
+$size = 10px
+
 some-mixin(a, b)
   font-size a+b
 
 // @stylint off
-.message
+p:active,
+DIV.text
   font-size 15px
   some-mixin(10px, 2)
 // @stylint on
 
-.warning
-  background-image url(http://s.baixing.net/a.png)
+div>p.warning
+  background-image url('http://s.baixing.net/a.png')
   border-radius (20px)
   color rgba(100, 255, 255, 1) // @stylint ignore
 

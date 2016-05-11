@@ -13,6 +13,7 @@ var cache = {
 	mixins: [], // an array of all declared transparent mixins
 	msg: '', // the done message (55 warnings blah blah)
 	origLine: '', // original line before stripping/trimming
+  origLines: [], // record original lines in an array
 	prevFile: '', // the previous file
 	prevFileNo: 0, // prev file no
 	prevLine: '', // the previous line

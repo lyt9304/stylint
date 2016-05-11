@@ -25,6 +25,7 @@ var Stylint = function( path, config, callback ) {
 	Lint = stampit().compose(
 		require( './src/core/' ),
 		require( './src/checks/' ),
+		require( './src/nodechecks' ),
 		require( './src/state/' ),
 		stampit().enclose( function() {
 			this.state.path = typeof path === 'string' ? path : './'

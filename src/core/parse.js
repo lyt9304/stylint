@@ -15,7 +15,6 @@ var config = {
   size: 2
 }
 
-
 /**
  * @description parses file for testing by removing extra new lines and block comments
  * @param {Object} [err] error obj from async if it exists
@@ -46,6 +45,8 @@ var parse = function( err, res ) {
 			return this.setState( line )
 		}.bind( this ) )
 
+    this.cache.origLines = lines
+
 		// record disabledLine for ast checking
 		console.log(this.cache.disabledLine)
 
@@ -54,6 +55,10 @@ var parse = function( err, res ) {
     var ast = parser.parse()
 
     fs.writeFileSync("test.txt", jsonFormat( ast, config))
+
+    ast = JSON.parse(JSON.stringify(ast))
+
+    this.astlint( ast )
 
 		// save previous file
 		this.cache.prevFile = this.cache.file

@@ -79,16 +79,24 @@ var config = {
 	zIndexNormalize: false,
 	// check for extra space for mixins
 	mixinSpacePref: 'never',
+
 	// check mixin name if it is valid spellec
-	mixinNameCheck: true,
+	//mixinNameCheck: true,
 	// check mixin param is start with a dollar symbol
-	prefixMixinsWithDollar: "always",
+	//prefixMixinsWithDollar: "always",
 	// check mixin param if it is valid spelled
-	mixinParamNameCheck: true,
+	//mixinParamNameCheck: true,
+
 	// check url() should not contain quotation
 	urlQuotation: "never",
 	// check url is a complete addressed url, not a local path
-	urlLink: true
+	urlLink: true,
+
+	// =====node lint=======
+
+	selectorLowerCase: true
+
+
 }
 
 module.exports = config
