@@ -42,8 +42,8 @@
   "urlQuotation": "never",
   "urlLink": true,
 
-  "selectorLowerCase": true
-  //  "mixinNameCheck": true,
+  "selectorLowerCase": true,
+  "mixinNameCheck": true
   //  "prefixMixinsWithDollar": "always",
   //  "mixinParamNameCheck": true,
 

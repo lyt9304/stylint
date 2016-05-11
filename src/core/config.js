@@ -86,9 +86,9 @@ var config = {
 
 	// =====node lint=======
 	// check if selector is lower-case
-	selectorLowerCase: true
+	selectorLowerCase: true,
 	// check mixin name if it is valid spellec
-	//mixinNameCheck: true,
+	mixinNameCheck: true
 	// check mixin param is start with a dollar symbol
 	//prefixMixinsWithDollar: "always",
 	// check mixin param if it is valid spelled
