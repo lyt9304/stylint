@@ -43,6 +43,7 @@
   "urlLink": true,
 
   "selectorLowerCase": true,
+  "propertyLowerCase": true,
   "mixinNameCheck": true,
   "prefixMixinParamsWithDollar": "always",
   "mixinParamNameCheck": true

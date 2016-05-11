@@ -58,6 +58,10 @@ var astlint = function(ast) {
         queue.push(now.nodes[i])
       }
     }
+
+    if(now.block){
+      queue.push(now.block)
+    }
   }
 }
 

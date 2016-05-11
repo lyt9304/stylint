@@ -87,12 +87,15 @@ var config = {
 	// =====node lint=======
 	// check if selector is lower-case
 	selectorLowerCase: true,
+	// check if property is lower-case
+	propertyLowerCase: true,
 	// check mixin name if it is valid spellec
 	mixinNameCheck: true,
 	// check mixin param is start with a dollar symbol
 	prefixMixinParamsWithDollar: "always",
 	// check mixin param if it is valid spelled
 	mixinParamNameCheck: true
+
 
 
 }
