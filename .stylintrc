@@ -44,7 +44,7 @@
 
   "selectorLowerCase": true,
   "mixinNameCheck": true,
-  //  "prefixMixinsWithDollar": "always",
+  "prefixMixinParamsWithDollar": "always",
   "mixinParamNameCheck": true
 
 }

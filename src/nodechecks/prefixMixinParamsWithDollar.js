@@ -1,13 +1,11 @@
 'use strict'
 
-var littleCamel = /^[a-z]+([A-Z][a-z]+)*$/
-
 /**
- * @description check mixin param if it is valid spelled (only contains a-z/A-Z/0-9, and be little camel-case)
+ * @description check mixin param if it is start with $
  * @param {string} [line] curr line being linted
  * @return {boolean} true if meet, false if not
  */
-var mixinParamNameCheck = function( node, line ) {
+var prefixMixinParamsWithDollar = function( node, line ) {
   var type = node['__type']
   var valType
 
@@ -22,26 +20,32 @@ var mixinParamNameCheck = function( node, line ) {
   var paramNodes = node['val']['params']['nodes']
 
   var nameCheck = true
-  var invalidChar = /[^a-zA-Z0-9]/
+  var prefixDollar = /^\$/
 
   for ( var i = 0; i < paramNodes.length; i++ ) {
     var param = paramNodes[i]
     if ( param['__type'] !== 'Ident' ) { continue }
 
     var paramName = param['name']
-    if( invalidChar.test( paramName ) || !littleCamel.test( paramName )) {
+    if( !prefixDollar.test( paramName ) ) {
       nameCheck = false
       break
     }
   }
 
-  if ( !nameCheck ) {
+  if ( this.state.conf === 'always' && !nameCheck ) {
     this.cache.lineNo = node['val']['lineno']
     this.cache.origLine = this.cache.origLines[this.cache.lineNo-1]
-    this.msg( 'except prefix $, names of mixin params only contain a-z/A-Z/0-9, and must be little camel-case' )
+    this.msg( 'mixin params must start with $' )
+  }
+
+  if ( this.state.conf === 'never' && nameCheck ) {
+    this.cache.lineNo = node['val']['lineno']
+    this.cache.origLine = this.cache.origLines[this.cache.lineNo-1]
+    this.msg( '$ sign is disallowed for mixin parameters' )
   }
 
   return nameCheck
 }
 
-module.exports = mixinParamNameCheck
+module.exports = prefixMixinParamsWithDollar

@@ -90,7 +90,7 @@ var config = {
 	// check mixin name if it is valid spellec
 	mixinNameCheck: true,
 	// check mixin param is start with a dollar symbol
-	//prefixMixinsWithDollar: "always",
+	prefixMixinParamsWithDollar: "always",
 	// check mixin param if it is valid spelled
 	mixinParamNameCheck: true
 
