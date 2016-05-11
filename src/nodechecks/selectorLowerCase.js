@@ -2,15 +2,10 @@
 
 var validHtml = require('../data/valid').html
 
-function isTag( name, prevSymbol ) {
-  var isHtmlTag = validHtml.indexOf(name) !== -1
-  return isHtmlTag
-}
-
 /**
- * @description disallows use of !important
+ * @description check if selector is lower-case
  * @param {object} [node] curr line being linted
- * @return {boolean} true if !important used, false if not
+ * @return {boolean} true selector has upper-case problem, false if not
  */
 var selectorLowerCase = function( node, line ) {
   var type = node['__type']
@@ -39,6 +34,8 @@ var selectorLowerCase = function( node, line ) {
   if( hasUpperCase ) {
     this.msg( 'selector must be lower case!' )
   }
+
+  return hasUpperCase
 
 }
 
