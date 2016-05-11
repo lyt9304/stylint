@@ -4,7 +4,8 @@ var stampit = require( 'stampit' )
 var nodeLinterMethods = stampit().methods( {
   nodeLintMethods: {
     selectorLowerCase: require('./selectorLowerCase'),
-    mixinNameCheck: require('./mixinNameCheck')
+    mixinNameCheck: require('./mixinNameCheck'),
+    mixinParamNameCheck: require('./mixinParamNameCheck')
   }
 } )
 
