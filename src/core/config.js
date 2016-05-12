@@ -96,7 +96,9 @@ var config = {
 	// check mixin param if it is valid spelled
 	mixinParamNameCheck: true,
 	// check operator has a space beside it
-	operatorSpace: true
+	// operatorSpace: true,
+	// check if expression is in paren
+	expressionParen: true
 
 }
 

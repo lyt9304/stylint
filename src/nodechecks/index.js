@@ -8,7 +8,8 @@ var nodeLinterMethods = stampit().methods( {
     mixinParamNameCheck: require('./mixinParamNameCheck'),
     prefixMixinParamsWithDollar: require('./prefixMixinParamsWithDollar'),
     propertyLowerCase: require('./propertyLowerCase'),
-    operatorSpace: require('./operatorSpace')
+    operatorSpace: require('./operatorSpace'),
+    expressionParen: require('./expressionParen')
   }
 } )
 

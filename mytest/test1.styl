@@ -15,9 +15,9 @@ div
 // @stylint off
 p:active,
 div.text
-  padding -(15px-$size) 15px 20px 20px
-  margin-left - $size
-  margin-right -10px+15px
+  padding (15px * (- ($size + 10px))) * 20.0 px 15px 20px 20px
+  margin-left (- ($size + 10px))
+  margin-right $size+15px
   some-mixin(10px, 2)
 // @stylint on
 
@@ -25,7 +25,7 @@ div>p.warning
   background-image url(http://s.baixing.net/a.png)
   border-radius 20px+10px
   color rgba(100, 255, 255, 1) // @stylint ignore
-  font-size 40px-30px+20px
+  font-size - $size
 
 a
   color red

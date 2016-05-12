@@ -47,7 +47,8 @@
   "mixinNameCheck": true,
   "prefixMixinParamsWithDollar": "always",
   "mixinParamNameCheck": true,
-  "operatorSpace": true
+  "operatorSpace": true,
+  "expressionParen": true
 
 }
 
