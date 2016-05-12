@@ -78,7 +78,7 @@ var config = {
 	// suggest a normalized z index value, base of whatever this is
 	zIndexNormalize: false,
 	// check for extra space for mixins
-	mixinSpacePref: 'never',
+	mixinSpacePref: true,
 	// check url() should not contain quotation
 	urlQuotation: "never",
 	// check url is a complete addressed url, not a local path
@@ -100,7 +100,7 @@ var config = {
 	// check if expression is in paren
 	//expressionParen: true,
 	// check if complex selector are in new line
-	complexSelectorNewLineWithComma: true,
+	complexSelectorNewLine: true,
 	// check if complex selector are in new line and with comma
 	complexSelectorComma: 'always'
 

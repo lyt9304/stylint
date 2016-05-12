@@ -36,7 +36,7 @@
   "valid": true,
   "zeroUnits": "never",
   "zIndexNormalize": 10,
-  "mixinSpacePref": "never",
+  "mixinSpacePref": true,
   "urlQuotation": "never",
   "urlLink": true,
 

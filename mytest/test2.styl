@@ -1,0 +1,140 @@
+body
+	background white
+	ul.products
+		margin 0
+		padding 0 16px
+		list-style none
+		.product
+			padding 16px 0
+			border-bottom 1px solid #e3e3e3
+			.product-info
+				margin-right 65px
+				.product-title
+					img
+						vertical-align bottom
+						width 18px
+						height 18px
+					span.title
+						margin-left 10px
+						margin-right 10px
+						color #fe7701
+				.product-desc
+					margin-top 10px
+					color #999
+					font-size 0.9em
+					padding-right 10px
+			.product-buy-btn
+				margin-top 5px
+			&.disabled
+				.product-title
+					span.title
+						color #999
+				.product-buy-btn
+					background #999
+@import './modules/pay/base'
+base()
+
+.pay-form
+	padding 10px
+	input[type='checkbox'],
+	input[type='radio']
+		padding 0
+		border 0
+	.coupons-options
+		select
+			box-sizing border-box
+			-webkit-box-sizing border-box
+			-moz-box-sizing border-box
+	p
+		margin 0
+		line-height 1.5
+		.warm-tip
+			margin-top 0.5em
+	.cmBtn
+		text-align center
+		border 1px #e3e3e3 solid
+	.btn:disabled
+		background #999
+	.btn-group
+		margin-top 20px
+	.btn
+		display inline-block
+		white-space nowrap
+		padding 10px 0
+		&.hide
+			display none
+	.back
+		width 30%
+		background #999
+	.tip-btn
+		background #999
+	.pay-decision
+		width 68%
+		margin-left 2%
+		&.center
+			width 100%
+			margin 0
+	.success
+		width 100%
+		margin-top 20px
+	h2
+		text-align center
+		margin-bottom 20px
+.modal
+	top 0
+	padding 10px
+	transition all 0.4s ease-in-out
+	-webkit-transition all 0.4s ease-in-out
+	-moz-transition all 0.4s ease-in-out
+	input[type='checkbox'],
+	input[type='radio']
+		padding 0
+		border 0
+	.coupons-options
+		select
+			box-sizing border-box
+			-webkit-box-sizing border-box
+			-moz-box-sizing border-box
+	p
+		margin 0
+		line-height 1.5
+	* // @stylint ignore
+		box-sizing content-box
+		-webkit-box-sizing content-box
+		-moz-box-sizing content-box
+	.cmBtn
+		text-align center
+		border 1px #e3e3e3 solid
+	.btn:disabled
+		background #999
+	.btn-group
+		margin-top 20px
+	.btn
+		display inline-block
+		white-space nowrap
+		padding 10px 0
+		&.hide
+			display none
+	.back
+		width 30%
+		background #999
+	.pay-decision
+		width 68%
+		margin-left 2%
+		&.center
+			width 100%
+			margin 0
+	.success
+		width 100%
+		margin-top 20px
+	h2
+		text-align center
+		margin-bottom 20px
+	&.show
+		left 0
+	&#recharge-modal
+		padding 0
+		* // @stylint ignore
+			box-sizing border-box
+			-webkit-box-sizing border-box
+			-moz-box-sizing border-box
