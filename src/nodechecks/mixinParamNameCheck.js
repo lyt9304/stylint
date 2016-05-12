@@ -42,9 +42,11 @@ var mixinParamNameCheck = function( node, line ) {
   }
 
   if ( !nameCheck ) {
-    this.cache.lineNo = node['val']['lineno']
-    this.cache.origLine = this.cache.origLines[this.cache.lineNo-1]
-    this.msg( 'except prefix $, names of mixin params only contain a-z/A-Z/0-9, and must be little camel-case' )
+    if ( this.cache.disabledLine.indexOf(this.cache.lineNo) === -1 ) {
+      this.cache.lineNo = node['val']['lineno']
+      this.cache.origLine = this.cache.origLines[this.cache.lineNo - 1]
+      this.msg('except prefix $, names of mixin params only contain a-z/A-Z/0-9, and must be little camel-case')
+    }
   }
 
   return nameCheck

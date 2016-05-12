@@ -23,16 +23,18 @@ var selectorLowerCase = function( node, line ) {
     if ( validHtml.indexOf(literal.toLowerCase()) !== -1 && symbolValid ) {
       if(upperCaseRe.test(literal)){
         hasUpperCase = true
-        // update lineNo, because lineno maybe wrong in situation p.text \n DIV.message, use lineno of the last segment
-        this.cache.lineNo = segments[segments.length-1].lineno
-        this.cache.origLine = this.cache.origLines[this.cache.lineNo-1]
         break
       }
     }
   }
 
   if( hasUpperCase ) {
-    this.msg( 'selector must be lower case!' )
+    if ( this.cache.disabledLine.indexOf(this.cache.lineNo) === -1 ) {
+      // update lineNo, because lineno maybe wrong in situation p.text \n DIV.message, use lineno of the last segment
+      this.cache.lineNo = segments[segments.length-1].lineno
+      this.cache.origLine = this.cache.origLines[this.cache.lineNo-1]
+      this.msg( 'selector must be lower case!' )
+    }
   }
 
   return hasUpperCase

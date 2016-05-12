@@ -24,9 +24,11 @@ var mixinNameCheck = function( node, line ) {
   var nameCheck = !invalidChar.test(name) && firstLetter.test(name)
 
   if ( !nameCheck ) {
-    this.cache.lineNo = node['val']['lineno']
-    this.cache.origLine = this.cache.origLines[this.cache.lineNo-1]
-    this.msg( 'mixin name only contains a-z/0-9/-, also first letter must be a-z' )
+    if ( this.cache.disabledLine.indexOf(this.cache.lineNo) === -1 ) {
+      this.cache.lineNo = node['val']['lineno']
+      this.cache.origLine = this.cache.origLines[this.cache.lineNo - 1]
+      this.msg('mixin name only contains a-z/0-9/-, also first letter must be a-z')
+    }
   }
 
   return nameCheck

@@ -41,15 +41,19 @@ var complexSelectorComma = function( node, line ) {
 
 
   if ( this.state.conf === 'always' && noComma === true ) {
-    this.cache.lineNo = prevLineno
-    this.cache.origLine = this.cache.origLines[prevLineno-1]
-    this.msg( 'complex selector must use comma' )
+    if ( this.cache.disabledLine.indexOf(this.cache.lineNo) === -1 ) {
+      this.cache.lineNo = prevLineno
+      this.cache.origLine = this.cache.origLines[prevLineno-1]
+      this.msg( 'complex selector must use comma' )
+    }
   }
 
   if ( this.state.conf === 'never' && noComma === false ) {
-    this.cache.lineNo = prevLineno
-    this.cache.origLine = this.cache.origLines[prevLineno-1]
-    this.msg( 'complex selector can\'t use comma to separate lines' )
+    if ( this.cache.disabledLine.indexOf(this.cache.lineNo) === -1 ) {
+      this.cache.lineNo = prevLineno
+      this.cache.origLine = this.cache.origLines[prevLineno - 1]
+      this.msg('complex selector can\'t use comma to separate lines')
+    }
   }
 
 }

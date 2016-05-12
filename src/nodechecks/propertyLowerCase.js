@@ -35,7 +35,9 @@ var propertyLowerCase = function( node, line ) {
   }
 
   if( hasUpperCase ) {
-    this.msg( 'property must be lower case!' )
+    if ( this.cache.disabledLine.indexOf(this.cache.lineNo) === -1 ) {
+      this.msg('property must be lower case!')
+    }
   }
 
   return hasUpperCase

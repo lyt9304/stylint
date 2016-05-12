@@ -38,9 +38,11 @@ var complexSelectorNewLine = function( node, line ) {
   }
 
   if ( noNewLine ) {
-    this.cache.lineNo = lineno
-    this.cache.origLine = this.cache.origLines[lineno-1]
-    this.msg( 'complex selector must use new line' )
+    if ( this.cache.disabledLine.indexOf(this.cache.lineNo) === -1 ) {
+      this.cache.lineNo = lineno
+      this.cache.origLine = this.cache.origLines[lineno - 1]
+      this.msg('complex selector must use new line')
+    }
   }
 
 

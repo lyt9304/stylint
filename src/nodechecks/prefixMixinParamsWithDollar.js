@@ -34,15 +34,19 @@ var prefixMixinParamsWithDollar = function( node, line ) {
   }
 
   if ( this.state.conf === 'always' && !nameCheck ) {
-    this.cache.lineNo = node['val']['lineno']
-    this.cache.origLine = this.cache.origLines[this.cache.lineNo-1]
-    this.msg( 'mixin params must start with $' )
+    if ( this.cache.disabledLine.indexOf(this.cache.lineNo) === -1 ) {
+      this.cache.lineNo = node['val']['lineno']
+      this.cache.origLine = this.cache.origLines[this.cache.lineNo - 1]
+      this.msg('mixin params must start with $')
+    }
   }
 
   if ( this.state.conf === 'never' && nameCheck ) {
-    this.cache.lineNo = node['val']['lineno']
-    this.cache.origLine = this.cache.origLines[this.cache.lineNo-1]
-    this.msg( '$ sign is disallowed for mixin parameters' )
+    if ( this.cache.disabledLine.indexOf(this.cache.lineNo) === -1 ) {
+      this.cache.lineNo = node['val']['lineno']
+      this.cache.origLine = this.cache.origLines[this.cache.lineNo - 1]
+      this.msg('$ sign is disallowed for mixin parameters')
+    }
   }
 
   return nameCheck

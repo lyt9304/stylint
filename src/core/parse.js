@@ -50,15 +50,19 @@ var parse = function( err, res ) {
 		// record disabledLine for ast checking
 		console.log(this.cache.disabledLine)
 
-		//TODO: ast check
     var parser = new Parser(file.toString())
-    var ast = parser.parse()
+    try {
+      var ast = parser.parse()
+      //fs.writeFileSync("test.txt", jsonFormat( ast, config))
+      ast = JSON.parse(JSON.stringify(ast))
+      this.astlint( ast )
 
-    fs.writeFileSync("test.txt", jsonFormat( ast, config))
-
-    ast = JSON.parse(JSON.stringify(ast))
-
-    this.astlint( ast )
+    }catch(err){
+      this.state.severity = 'Error'
+      this.cache.lineNo = err.lineno || parser.lexer.lineno;
+      this.cache.origLine = this.cache.origLine[this.cache.lineNo-1] || ""
+      this.msg( 'Stylus parse error!' )
+    }
 
 		// save previous file
 		this.cache.prevFile = this.cache.file
