@@ -2,9 +2,7 @@
   "blocks": false,
   "brackets": "never",
   "colons": "never",
-  "colors": {
-    "expect": "always"
-  },
+  "colors": false,
   "commaSpace": "always",
   "commentSpace": "always",
   "cssLiteral": "never",
