@@ -4,6 +4,7 @@ var minusDigitalRe = /^\-\d+/
 var minusStartRe = /^\-/
 var numberRe = /^-?[1-9]\d*$|^(-?([1-9]\d*)?\.\d*|0\.\d*[1-9]\d*|0?\.0+|0)$/
 
+//TODO:not completed
 /**
  * @description check operator has a space beside it
  * @param {string} [line] curr line being linted
