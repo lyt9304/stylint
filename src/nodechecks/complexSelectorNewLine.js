@@ -9,13 +9,13 @@ function getComplexSelectorLineNo(node){
 }
 
 /**
- * @description checks spell for mixin name (using a-z,0-9,-)
+ * @description check if complex selector are in new line
  * @param {string} [line] curr line being linted
  * @return {boolean} true if meet, false if not
  */
 var complexSelectorNewLine = function( node, line ) {
   var type = node['__type']
-  var prevLineno = -1;
+  var prevLineno = -1
 
   if ( type !== 'Group') { return }
 
@@ -24,14 +24,14 @@ var complexSelectorNewLine = function( node, line ) {
   var noNewLine = false
 
   for (var i = 0; i < nodes.length; i++) {
-    var obj = nodes[i];
+    var obj = nodes[i]
     var objType = obj['__type']
 
     if ( objType === 'Selector' ) {
       var lineno = getComplexSelectorLineNo(obj)
       if ( lineno !== -1 && prevLineno !== -1 && lineno === prevLineno) {
         noNewLine = true
-        break;
+        break
       }
       prevLineno = lineno
     }

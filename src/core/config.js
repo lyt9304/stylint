@@ -98,9 +98,11 @@ var config = {
 	// check operator has a space beside it
 	// operatorSpace: true,
 	// check if expression is in paren
-	expressionParen: true,
-	//
-	complexSelectorNewLineWithComma: true
+	//expressionParen: true,
+	// check if complex selector are in new line
+	complexSelectorNewLineWithComma: true,
+	// check if complex selector are in new line and with comma
+	complexSelectorComma: 'always'
 
 }
 

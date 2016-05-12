@@ -10,7 +10,8 @@ var nodeLinterMethods = stampit().methods( {
     propertyLowerCase: require('./propertyLowerCase'),
     operatorSpace: require('./operatorSpace'),
     expressionParen: require('./expressionParen'),
-    complexSelectorNewLine: require('./complexSelectorNewLine')
+    complexSelectorNewLine: require('./complexSelectorNewLine'),
+    complexSelectorComma: require('./complexSelectorComma')
   }
 } )
 
