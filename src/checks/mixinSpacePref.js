@@ -1,6 +1,6 @@
 'use strict'
 
-var mixinRe = /(\s*)(\S+)(\s*)\((.+)\)/ // but still need to check if it is a mixin
+var mixinRe = /(\s*)(\S+)(\s*)\((.*)\)/ // but still need to check if it is a mixin
 var mixinWithSpaceRe = /(\s)+\(/
 var mixinWithSpaceStr = "(\\\s)+\\\("
 var validJSON = require('../data/valid.json')

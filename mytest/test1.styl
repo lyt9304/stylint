@@ -1,33 +1,56 @@
-$size = 10px
-$color = red
+@extend 'haha'
+$size = 12px
+some-mixin($paramOne, $site)
+	font-size 12px
 
-some-mixin($a, $b)
-  font-size $a+$b
+@import './modules/ui/index'
 
-div
-  .warning
-    color red
-  p
-    color $color
-    display inline-block
-    translate translate(10px, 10px)
+@import './modules/pay/base'
+base()
 
-// @stylint off
-p:active,
-div.text
-  padding (15px * (- ($size + 10px))) * 20.0 px 15px 20px 20px
-  margin-left (- ($size + 10px))
-  margin-right $size+15px
-  some-mixin(10px, 2)
-// @stylint on
+@import './modules/pay/package'
+package()
 
-div>p.warning
-  background-image url(http://s.baixing.net/a.png)
-  border-radius 20px+10px
-  color rgba(100, 255, 255, 1) // @stylint ignore
-  font-size - $size
-
-a
-  color red
-
-
+body
+	height auto
+h2.msg
+	font-size 22px
+.cmSubview
+	main
+		padding 0 0 10px
+		.cmBtnLine
+			margin-top 20px
+			.cmBtn.back
+				max-width 35%
+			.cmBtn:not(.back)
+				min-width 65%
+				margin-right 0
+#mForm
+	padding 0 15px
+	.service-title
+		padding 0
+		border-bottom 0
+	.btn:disabled
+		background #999
+	.btn-group
+		margin-top 20px
+	.btn
+		display inline-block
+		white-space nowrap
+		padding 10px 0
+		&.hide
+			display none
+	.back.app
+		width 30%
+		background #999
+	.pay-decision
+		width 68%
+		margin-left 2%
+		&.one
+			margin-left 0
+	.success
+			width 100%
+			margin-top 20px
+	h2
+		text-align center
+		margin-bottom 20px
