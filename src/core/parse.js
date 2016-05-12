@@ -48,7 +48,6 @@ var parse = function( err, res ) {
     this.cache.origLines = lines
 
 		// record disabledLine for ast checking
-		console.log(this.cache.disabledLine)
 
     var parser = new Parser(file.toString())
     try {
