@@ -11,7 +11,8 @@ var nodeLinterMethods = stampit().methods( {
     operatorSpace: require('./operatorSpace'),
     expressionParen: require('./expressionParen'),
     complexSelectorNewLine: require('./complexSelectorNewLine'),
-    complexSelectorComma: require('./complexSelectorComma')
+    complexSelectorComma: require('./complexSelectorComma'),
+    varNameCheck: require('./varNameCheck')
   }
 } )
 

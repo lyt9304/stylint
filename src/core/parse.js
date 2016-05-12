@@ -52,7 +52,7 @@ var parse = function( err, res ) {
     var parser = new Parser(file.toString())
     try {
       var ast = parser.parse()
-      //fs.writeFileSync("test.txt", jsonFormat( ast, config))
+      fs.writeFileSync("test.txt", jsonFormat( ast, config))
       ast = JSON.parse(JSON.stringify(ast))
       this.astlint( ast )
 

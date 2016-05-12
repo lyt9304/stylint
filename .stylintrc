@@ -48,8 +48,8 @@
   "operatorSpace": true,
   "expressionParen": true,
   "complexSelectorNewLine": true,
-  "complexSelectorComma": "always"
-
+  "complexSelectorComma": "always",
+  "varNameCheck": true
 }
 
 // {

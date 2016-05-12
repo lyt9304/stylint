@@ -102,7 +102,9 @@ var config = {
 	// check if complex selector are in new line
 	complexSelectorNewLine: true,
 	// check if complex selector are in new line and with comma
-	complexSelectorComma: 'always'
+	complexSelectorComma: 'always',
+  // checks spell for variable name
+  varNameCheck: true
 
 }
 
