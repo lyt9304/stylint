@@ -94,9 +94,9 @@ var config = {
 	// check mixin param is start with a dollar symbol
 	prefixMixinParamsWithDollar: "always",
 	// check mixin param if it is valid spelled
-	mixinParamNameCheck: true
-
-
+	mixinParamNameCheck: true,
+	// check operator has a space beside it
+	operatorSpace: true
 
 }
 

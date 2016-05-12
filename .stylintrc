@@ -46,7 +46,8 @@
   "propertyLowerCase": true,
   "mixinNameCheck": true,
   "prefixMixinParamsWithDollar": "always",
-  "mixinParamNameCheck": true
+  "mixinParamNameCheck": true,
+  "operatorSpace": true
 
 }
 
