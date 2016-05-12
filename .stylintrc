@@ -48,7 +48,8 @@
   "prefixMixinParamsWithDollar": "always",
   "mixinParamNameCheck": true,
   "operatorSpace": true,
-  "expressionParen": true
+  "expressionParen": true,
+  "complexSelectorNewLine": true
 
 }
 

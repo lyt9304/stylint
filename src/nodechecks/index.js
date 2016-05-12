@@ -9,7 +9,8 @@ var nodeLinterMethods = stampit().methods( {
     prefixMixinParamsWithDollar: require('./prefixMixinParamsWithDollar'),
     propertyLowerCase: require('./propertyLowerCase'),
     operatorSpace: require('./operatorSpace'),
-    expressionParen: require('./expressionParen')
+    expressionParen: require('./expressionParen'),
+    complexSelectorNewLine: require('./complexSelectorNewLine')
   }
 } )
 
