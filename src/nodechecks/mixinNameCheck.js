@@ -19,7 +19,7 @@ var mixinNameCheck = function( node, line ) {
 
   var name = node['val']['name']
 
-  var invalidChar = /[^a-zA-Z\-]/
+  var invalidChar = /[^a-z0-9\-]/
   var firstLetter = /^[a-z\-]/
   var nameCheck = !invalidChar.test(name) && firstLetter.test(name)
 

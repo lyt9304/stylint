@@ -1,7 +1,7 @@
 'use strict'
 
 var urlRe = /( +|:)url\((.+)\)/g
-var baxingResourceRe = /^https?:\/\/s\.baixing\.net/
+var baxingResourceRe = /^https?:\/\/s\.baixing\.net|^https?:\/\/file\.baixing\.net|data:image\/png;base64/
 
 /**
  * test if a string matches pattern of url

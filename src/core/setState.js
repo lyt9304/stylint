@@ -3,7 +3,7 @@
 // super simple.
 // if theres anything on the line besides whitespace, it aint empty
 var emptyLineRe = /\S/
-var urlRe = /( +|:)url\(.+\)/g
+var urlRe = /( +|:)?url\(.+\)/g
 
 /**
  * @description sets values like context, determine whether we even run tests, etc

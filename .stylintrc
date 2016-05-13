@@ -20,7 +20,7 @@
   "namingConvention": false,
   "namingConventionStrict": false,
   "none": false,
-  "noImportant": true,
+  "noImportant": false,
   "noRequire": true,
   "noExtend": false,
   "noCharset": true,

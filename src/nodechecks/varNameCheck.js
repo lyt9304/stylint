@@ -26,7 +26,7 @@ var varNameCheck = function( node, line ) {
   }
 
   var invalidChar = /[^a-zA-Z\-]/
-  var firstLetter = /^[a-z]/
+  var firstLetter = /^[a-z\-]/
   var nameCheck = !invalidChar.test(name) && firstLetter.test(name)
 
   if ( !nameCheck ) {
